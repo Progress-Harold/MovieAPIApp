@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="3ed-Vb-rhE">
+            <objects>
+                <viewController id="1Cb-mq-5La" customClass="WelcomeViewController" customModule="MovieAPIApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tex-Hn-YmK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1E-eb-mO3">
+                                <rect key="frame" x="85" y="171" width="244" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="ufh-oV-BnD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INh-gF-M8S">
+                                <rect key="frame" x="85" y="531" width="244" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Dq1-MO-zr2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1652139276" green="0.16781006749999999" blue="0.2157994956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="trailing" secondItem="INh-gF-M8S" secondAttribute="trailing" id="1KK-Di-h8o"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="centerX" secondItem="Tex-Hn-YmK" secondAttribute="centerX" id="IMk-YZ-ift"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="leading" secondItem="INh-gF-M8S" secondAttribute="leading" id="Oea-zW-wvz"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="top" secondItem="8d1-CT-Qsd" secondAttribute="top" constant="151" id="PWJ-Yq-szL"/>
+                            <constraint firstItem="8d1-CT-Qsd" firstAttribute="bottom" secondItem="INh-gF-M8S" secondAttribute="bottom" constant="141" id="UIZ-rV-9Jo"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="leading" secondItem="8d1-CT-Qsd" secondAttribute="leading" constant="85" id="l3y-ib-zz3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8d1-CT-Qsd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7FF-dG-YeV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
