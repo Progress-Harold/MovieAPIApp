@@ -19,7 +19,11 @@ class Movie: Object  {
     @objc dynamic var date: String?
     @objc dynamic var address: String?
     
-    struct Indecies {
+    var comparableName: String {
+        return name ?? ""
+    }
+    
+    struct Indices {
         static var id: Int = 0
         static var name: Int = 8
         static var date: Int = 9
@@ -28,9 +32,9 @@ class Movie: Object  {
     
     convenience init(with response: [Any]) {
         self.init()
-        self.id = response[Indecies.id] as? Int ?? 0
-        self.name = response[Indecies.name] as? String ?? ""
-        self.date = response[Indecies.date] as? String ?? ""
-        self.address = response[Indecies.address] as? String ?? ""
+        self.id = response[Indices.id] as? Int ?? 0
+        self.name = response[Indices.name] as? String ?? ""
+        self.date = response[Indices.date] as? String ?? ""
+        self.address = response[Indices.address] as? String ?? ""
     }
 }

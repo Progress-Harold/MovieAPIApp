@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import CoreLocation
+import MapKit
+import UIKit
+
+
+class MovieDetailViewController: UIViewController {
+    var movieMC = MovieModelController.sharedInstence
+    
+    override func viewDidLoad() {
+        
+    }
+    
+    
+    
+}
+

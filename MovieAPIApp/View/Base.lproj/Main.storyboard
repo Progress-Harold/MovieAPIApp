@@ -30,10 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGT-cF-4gr">
-                                                    <rect key="frame" x="8" y="10" width="170" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="170" id="1vm-67-ZNd"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="8" y="10" width="83.333333333333329" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -48,6 +45,7 @@
                                             <constraints>
                                                 <constraint firstItem="h6Q-fy-nVP" firstAttribute="trailing" secondItem="9Jd-Ka-nbP" secondAttribute="trailingMargin" id="8Ma-W2-sAZ"/>
                                                 <constraint firstItem="h6Q-fy-nVP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Jd-Ka-nbP" secondAttribute="leadingMargin" id="OuJ-GQ-LGz"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lGT-cF-4gr" secondAttribute="trailingMargin" id="TzI-5a-6HP"/>
                                                 <constraint firstItem="lGT-cF-4gr" firstAttribute="centerY" secondItem="9Jd-Ka-nbP" secondAttribute="centerY" id="cd5-m7-tbX"/>
                                                 <constraint firstItem="lGT-cF-4gr" firstAttribute="baseline" secondItem="h6Q-fy-nVP" secondAttribute="baseline" id="f3N-Hy-jdR"/>
                                                 <constraint firstItem="lGT-cF-4gr" firstAttribute="leading" secondItem="9Jd-Ka-nbP" secondAttribute="leadingMargin" id="xcN-ni-fBm"/>

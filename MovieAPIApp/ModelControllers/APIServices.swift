@@ -12,6 +12,8 @@ import Foundation
 class APIServices {
     static var sharedInstance = APIServices()
     
+    let databaseInterface = DatabaseInterface.sharedInstance
+    
     var baseUrl: String = "https://data.sfgov.org/api/views/yitu-d5am/rows.json?accessType=DOWNLOAD"
     
     func getMovies(completion: @escaping(_ movieArr: [Movie]?, _ error: NSError?) -> Void) {
@@ -34,8 +36,15 @@ class APIServices {
                     if let moviesArr = json["data"] as? [[Any]] {
                         for movie in moviesArr {
                             movies.append(Movie(with: movie))
-                            print("\(movie[8])")
+                            
                         }
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.databaseInterface.update {
+                            self.databaseInterface.save(movies)
+                        }
+                        
                     }
                     
                     completion(movies, nil)

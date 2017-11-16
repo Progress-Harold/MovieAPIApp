@@ -21,6 +21,18 @@ class DatabaseInterface {
         return try! Realm()
     }
     
+    
+    
+    func update(_ block: @escaping () -> Void) {
+        do {
+            try realm.write(block)
+        }
+        catch {
+            print("Cant perform write block here.", error)
+        }
+    }
+    
+    
     //MARK: Set realm filepath
     
     /// Modifies the name of the file path that stores all realm objects on device.

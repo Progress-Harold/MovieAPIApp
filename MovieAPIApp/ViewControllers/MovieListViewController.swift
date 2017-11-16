@@ -46,14 +46,57 @@ class MovieListViewController: UIViewController {
                 }
                 // If database is empty populate array with what is on the server and save all objects.
                 else {
-                    self.moviesArr = movieFromServer
+                    DispatchQueue.main.async {
+                        self.moviesArr = movieFromServer
+                    }
                 }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now()) {
+            
+            
+            DispatchQueue.main.async {
+                self.appState.databaseInterface.update {
+                    self.moviesArr = self.filterMovies().sorted { $0.comparableName < $1.comparableName }                    
+                }
                 self.tableView.reloadData()
             }
         }
-        self.appState.databaseInterface.save(self.moviesArr)
+    }
+    
+    func filterMovies() -> [Movie] {
+        var movieNames: [String] = self.moviesArr.map { $0.comparableName }
+        movieNames = uniqueElementsFrom(array: movieNames)
+        
+        var newMovieArr: [Movie] = []
+        
+        if !movieNames.isEmpty {
+            for movie in moviesArr {
+                if movieNames.contains(movie.name!) {
+                    let index = movieNames.index(of: movie.name!)
+                    newMovieArr.append(movie)
+                    movieNames.remove(at: index!)
+                }
+            }
+        }
+        
+        return newMovieArr
+    }
+    
+    
+    func uniqueElementsFrom(array: [String]) -> [String] {
+        //Create an empty Set to track unique items
+        var set = Set<String>()
+        let result = array.filter {
+            guard !set.contains($0) else {
+                //If the set already contains this object, return false
+                //so we skip it
+                return false
+            }
+            //Add this item to the set since it will now be in the array
+            set.insert($0)
+            //Return true so that filtered array will contain this item.
+            return true
+        }
+        return result
     }
 }
 

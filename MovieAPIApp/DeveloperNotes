@@ -7,17 +7,16 @@ Harold Davis Jr
 
 Task List:
 - Get list of Movies. [x]
-- Show list of movies ,locations, and dates. []
+- Show list of movies ,locations, and dates. [x]
 - Show location on map in detail view when tapping on it. []
-- Add a sorting button on nav bar. []
-- Setup Realm Interface
-- Cache data locally. []
+- Setup Realm Interface. [x]
+- Cache data locally. [x]
 
 
 Tests:
-- Test JSON Response. []
-- Saving Movie Objects. []
-- Cacheing Data. []
+- Test JSON Response. [x]
+- Saving Movie Objects. [x]
+- Cacheing Data. [x]
 - Map in Detail Movie View. []
 - Sort List of Movies. []
 
