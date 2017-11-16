@@ -40,7 +40,10 @@ class APIServices {
                             movies.append(Movie(with: movie))
                         }
                     }
-                    completion(movies, nil)
+                    
+                    DispatchQueue.main.async {
+                        completion(movies, nil)                        
+                    }
                 }
                 catch let jsonError {
                     completion(nil, jsonError as NSError)
