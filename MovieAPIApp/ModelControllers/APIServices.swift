@@ -23,7 +23,8 @@ class APIServices {
                 completion(nil, error as NSError?)
                 return
             }
-            
+           
+            // MovieArr to return in completion.
             var movies: [Movie] = []
             
             if let data = data {
@@ -44,7 +45,6 @@ class APIServices {
                 }
             }
             }.resume()
-        
     }
     
     

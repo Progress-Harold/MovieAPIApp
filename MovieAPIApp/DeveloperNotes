@@ -10,6 +10,7 @@ Task List:
 - Show list of movies ,locations, and dates. []
 - Show location on map in detail view when tapping on it. []
 - Add a sorting button on nav bar. []
+- Setup Realm Interface
 - Cache data locally. []
 
 
