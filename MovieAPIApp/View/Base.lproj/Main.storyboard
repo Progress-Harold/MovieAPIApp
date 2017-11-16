@@ -22,56 +22,41 @@
                                 <rect key="frame" x="0.0" y="114" width="414" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" rowHeight="72" id="Sma-r3-5mO">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="72"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" rowHeight="42" id="Sma-r3-5mO" customClass="MovieTableViewCell" customModule="MovieAPIApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sma-r3-5mO" id="9Jd-Ka-nbP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="71.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="217" translatesAutoresizingMaskIntoConstraints="NO" id="1F2-Yb-CNW">
-                                                    <rect key="frame" x="39" y="8" width="336.33333333333331" height="59"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-MA-ec5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="83.333333333333329" height="59"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGT-cF-4gr">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="83.333333333333329" height="20"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="20" id="kwJ-vD-iLQ"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWF-fB-vgi">
-                                                                    <rect key="frame" x="0.0" y="38" width="83.333333333333329" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6Q-fy-nVP">
-                                                            <rect key="frame" x="300.33333333333331" y="0.0" width="36" height="20.333333333333332"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGT-cF-4gr">
+                                                    <rect key="frame" x="8" y="10" width="170" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="nVY-MA-ec5" secondAttribute="bottom" id="3yc-Gq-vFH"/>
+                                                        <constraint firstAttribute="width" constant="170" id="1vm-67-ZNd"/>
                                                     </constraints>
-                                                </stackView>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6Q-fy-nVP">
+                                                    <rect key="frame" x="370" y="10" width="36" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="1F2-Yb-CNW" secondAttribute="bottom" constant="-3.3333333333333286" id="QYU-s1-HRX"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1F2-Yb-CNW" secondAttribute="trailing" constant="5" id="Sbf-aK-jbf"/>
-                                                <constraint firstItem="1F2-Yb-CNW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Jd-Ka-nbP" secondAttribute="leading" constant="5" id="TeN-4z-sKt"/>
-                                                <constraint firstItem="1F2-Yb-CNW" firstAttribute="centerX" secondItem="9Jd-Ka-nbP" secondAttribute="centerX" id="ZIs-PZ-F0W"/>
-                                                <constraint firstItem="1F2-Yb-CNW" firstAttribute="top" secondItem="9Jd-Ka-nbP" secondAttribute="topMargin" id="erj-pH-GAo"/>
+                                                <constraint firstItem="h6Q-fy-nVP" firstAttribute="trailing" secondItem="9Jd-Ka-nbP" secondAttribute="trailingMargin" id="8Ma-W2-sAZ"/>
+                                                <constraint firstItem="h6Q-fy-nVP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Jd-Ka-nbP" secondAttribute="leadingMargin" id="OuJ-GQ-LGz"/>
+                                                <constraint firstItem="lGT-cF-4gr" firstAttribute="centerY" secondItem="9Jd-Ka-nbP" secondAttribute="centerY" id="cd5-m7-tbX"/>
+                                                <constraint firstItem="lGT-cF-4gr" firstAttribute="baseline" secondItem="h6Q-fy-nVP" secondAttribute="baseline" id="f3N-Hy-jdR"/>
+                                                <constraint firstItem="lGT-cF-4gr" firstAttribute="leading" secondItem="9Jd-Ka-nbP" secondAttribute="leadingMargin" id="xcN-ni-fBm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLbl" destination="h6Q-fy-nVP" id="R6t-Yd-AWj"/>
+                                            <outlet property="movieTitleLbl" destination="lGT-cF-4gr" id="U5Y-l4-rc7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

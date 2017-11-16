@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1E-eb-mO3">
                                 <rect key="frame" x="85" y="171" width="244" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="ufh-oV-BnD"/>
+                                    <constraint firstAttribute="height" constant="64" id="ymD-S1-NNX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -28,29 +28,37 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="INh-gF-M8S">
                                 <rect key="frame" x="85" y="531" width="244" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="Dq1-MO-zr2"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="movieSkycatch logo" translatesAutoresizingMaskIntoConstraints="NO" id="gTx-sL-hbo">
+                                <rect key="frame" x="126" y="265" width="163" height="207"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1652139276" green="0.16781006749999999" blue="0.2157994956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="trailing" secondItem="INh-gF-M8S" secondAttribute="trailing" id="1KK-Di-h8o"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="centerX" secondItem="Tex-Hn-YmK" secondAttribute="centerX" id="IMk-YZ-ift"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="leading" secondItem="INh-gF-M8S" secondAttribute="leading" id="Oea-zW-wvz"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="top" secondItem="8d1-CT-Qsd" secondAttribute="top" constant="151" id="PWJ-Yq-szL"/>
-                            <constraint firstItem="8d1-CT-Qsd" firstAttribute="bottom" secondItem="INh-gF-M8S" secondAttribute="bottom" constant="141" id="UIZ-rV-9Jo"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="leading" secondItem="8d1-CT-Qsd" secondAttribute="leading" constant="85" id="l3y-ib-zz3"/>
+                            <constraint firstItem="gTx-sL-hbo" firstAttribute="centerY" secondItem="Tex-Hn-YmK" secondAttribute="centerY" id="Gtb-UM-owe"/>
+                            <constraint firstItem="INh-gF-M8S" firstAttribute="top" secondItem="gTx-sL-hbo" secondAttribute="bottom" constant="59" id="S1i-jX-IB4"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="top" secondItem="8d1-CT-Qsd" secondAttribute="top" constant="151" id="egP-Zy-pNB"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="centerX" secondItem="gTx-sL-hbo" secondAttribute="centerX" id="fT7-jB-UEL"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="trailing" secondItem="INh-gF-M8S" secondAttribute="trailing" id="gbD-p2-rNu"/>
+                            <constraint firstItem="gTx-sL-hbo" firstAttribute="top" secondItem="C1E-eb-mO3" secondAttribute="bottom" constant="30" id="geD-LX-sYm"/>
+                            <constraint firstItem="gTx-sL-hbo" firstAttribute="leading" secondItem="8d1-CT-Qsd" secondAttribute="leading" constant="126" id="kHX-AI-bB9"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="leading" secondItem="8d1-CT-Qsd" secondAttribute="leading" constant="85" id="muM-C9-Ofn"/>
+                            <constraint firstItem="8d1-CT-Qsd" firstAttribute="bottom" secondItem="INh-gF-M8S" secondAttribute="bottom" constant="141" id="pCt-QW-Lhk"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="centerX" secondItem="Tex-Hn-YmK" secondAttribute="centerX" id="u89-hh-kYz"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="leading" secondItem="INh-gF-M8S" secondAttribute="leading" id="uTU-67-3I6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8d1-CT-Qsd"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FF-dG-YeV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="movieSkycatch logo" width="516" height="512"/>
+    </resources>
 </document>

@@ -34,9 +34,9 @@ class APIServices {
                     if let moviesArr = json["data"] as? [[Any]] {
                         for movie in moviesArr {
                             movies.append(Movie(with: movie))
+                            print("\(movie[8])")
                         }
                     }
-                    
                     
                     completion(movies, nil)
                 }

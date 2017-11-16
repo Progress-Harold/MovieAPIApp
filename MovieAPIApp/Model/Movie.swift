@@ -16,18 +16,21 @@ import RealmSwift
 class Movie: Object  {
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String?
+    @objc dynamic var date: String?
     @objc dynamic var address: String?
     
     struct Indecies {
         static var id: Int = 0
-        static var name: Int = 5
-        static var address: Int = 11
+        static var name: Int = 8
+        static var date: Int = 9
+        static var address: Int = 10
     }
     
     convenience init(with response: [Any]) {
         self.init()
         self.id = response[Indecies.id] as? Int ?? 0
         self.name = response[Indecies.name] as? String ?? ""
-        address = response[Indecies.address] as? String ?? ""
+        self.date = response[Indecies.date] as? String ?? ""
+        self.address = response[Indecies.address] as? String ?? ""
     }
 }

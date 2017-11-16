@@ -11,6 +11,7 @@ import UIKit
 
 class MovieListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
+    
     var appState = AppStateController.sharedInstance
     var movieMC = MovieModelController.sharedInstence
 
@@ -24,11 +25,12 @@ class MovieListViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
+        
+        getMovies()
     }
     
     
     func getMovies() {
-        // Get movies from Database and set movies array value.
         moviesArr = movieMC.getSavedMovies()
         
         appState.services.getMovies { movieFromServer, error in
@@ -39,17 +41,19 @@ class MovieListViewController: UIViewController {
                     for movie in movieFromServer {
                         if !movieIDs.contains(movie.id) {
                             self.moviesArr.append(movie)
-                            self.appState.databaseInterface.save(movie)
                         }
                     }
                 }
                 // If database is empty populate array with what is on the server and save all objects.
                 else {
                     self.moviesArr = movieFromServer
-                    self.appState.databaseInterface.save(movieFromServer)
                 }
             }
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.tableView.reloadData()
+            }
         }
+        self.appState.databaseInterface.save(self.moviesArr)
     }
 }
 
@@ -62,14 +66,16 @@ extension MovieListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let movie = moviesArr[indexPath.row]
         
-        // TODO: change this to custom cell setup
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! MovieTableViewCell
+        
+        cell.configureCell(movie)
         
         return cell
     }
 }
 
-
 extension MovieListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
