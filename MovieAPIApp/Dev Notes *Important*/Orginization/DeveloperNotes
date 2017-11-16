@@ -21,4 +21,6 @@ Tests:
 - Sort List of Movies. []
 
 Known Bugs From Tests:
-
+- Not pushing on navigation Stack. []
+- Not caching data. []
+-

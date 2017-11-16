@@ -88,6 +88,11 @@
 		6E39B33A1FBD3B3600B0B597 /* AppStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateController.swift; sourceTree = "<group>"; };
 		6E39B33E1FBD47FC00B0B597 /* MovieModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModelController.swift; sourceTree = "<group>"; };
 		6E95B0EC1FBD780000644DCF /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		6EA5F8D81FBE05A40086004B /* IMG_0095.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0095.PNG; sourceTree = "<group>"; };
+		6EA5F8D91FBE05A40086004B /* IMG_0096.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0096.PNG; sourceTree = "<group>"; };
+		6EA5F8DA1FBE05A50086004B /* IMG_0097.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0097.PNG; sourceTree = "<group>"; };
+		6EA5F8DB1FBE05A50086004B /* IMG_0094.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0094.PNG; sourceTree = "<group>"; };
+		6EA5F8DC1FBE067F0086004B /* Skycatch Movie API App Plan.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Skycatch Movie API App Plan.pdf"; sourceTree = "<group>"; };
 		6EFC74551FBCAB1100911C40 /* MovieAPIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieAPIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EFC74581FBCAB1100911C40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EFC745D1FBCAB1100911C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -176,6 +181,35 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		6EA5F8D51FBE04090086004B /* Dev Notes *Important* */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5F8D71FBE05760086004B /* Orginization */,
+				6EA5F8D61FBE053F0086004B /* Sketch Notes */,
+			);
+			path = "Dev Notes *Important*";
+			sourceTree = "<group>";
+		};
+		6EA5F8D61FBE053F0086004B /* Sketch Notes */ = {
+			isa = PBXGroup;
+			children = (
+				6EA5F8DB1FBE05A50086004B /* IMG_0094.PNG */,
+				6EA5F8D81FBE05A40086004B /* IMG_0095.PNG */,
+				6EA5F8D91FBE05A40086004B /* IMG_0096.PNG */,
+				6EA5F8DA1FBE05A50086004B /* IMG_0097.PNG */,
+			);
+			path = "Sketch Notes";
+			sourceTree = "<group>";
+		};
+		6EA5F8D71FBE05760086004B /* Orginization */ = {
+			isa = PBXGroup;
+			children = (
+				6E39B3331FBCD20F00B0B597 /* DeveloperNotes */,
+				6EA5F8DC1FBE067F0086004B /* Skycatch Movie API App Plan.pdf */,
+			);
+			path = Orginization;
+			sourceTree = "<group>";
+		};
 		6EFC744C1FBCAB1100911C40 = {
 			isa = PBXGroup;
 			children = (
@@ -201,8 +235,8 @@
 		6EFC74571FBCAB1100911C40 /* MovieAPIApp */ = {
 			isa = PBXGroup;
 			children = (
-				6E39B3331FBCD20F00B0B597 /* DeveloperNotes */,
 				6EFC74581FBCAB1100911C40 /* AppDelegate.swift */,
+				6EA5F8D51FBE04090086004B /* Dev Notes *Important* */,
 				6EFC748E1FBCAC1200911C40 /* ModelControllers */,
 				6EFC748D1FBCABA100911C40 /* Model */,
 				6EFC748F1FBCAC2000911C40 /* View */,

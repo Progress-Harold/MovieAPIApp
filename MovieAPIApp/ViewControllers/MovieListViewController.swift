@@ -119,6 +119,13 @@ extension MovieListViewController: UITableViewDataSource {
 
 extension MovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = moviesArr[indexPath.row]
         
+        let storyboard = UIStoryboard(name: "MovieDetails", bundle: nil)
+        let movieDetailVC = storyboard.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
+        
+        movieDetailVC.movieName = movie.name
+        
+        self.navigationController?.pushViewController(movieDetailVC, animated: true)
     }
 }

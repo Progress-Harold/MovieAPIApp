@@ -18,4 +18,10 @@ class MovieModelController {
     func getSavedMovies() -> [Movie] {
         return Array(databaseInterface.realm.objects(Movie.self))
     }
+    
+    
+    func getMoviesBy(name: String) -> [Movie] {
+        let realmMovies = Array(databaseInterface.realm.objects(Movie.self))
+        return realmMovies.filter { $0.name == name }
+    }
 }

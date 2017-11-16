@@ -8,11 +8,13 @@
 
 import Foundation
 
-
+/**
+ Made to get data needed from the server.
+ */
 class APIServices {
     static var sharedInstance = APIServices()
     
-    let databaseInterface = DatabaseInterface.sharedInstance
+    let movieMC = MovieModelController.sharedInstence
     
     var baseUrl: String = "https://data.sfgov.org/api/views/yitu-d5am/rows.json?accessType=DOWNLOAD"
     
@@ -36,17 +38,8 @@ class APIServices {
                     if let moviesArr = json["data"] as? [[Any]] {
                         for movie in moviesArr {
                             movies.append(Movie(with: movie))
-                            
                         }
                     }
-                    
-                    DispatchQueue.main.async {
-                        self.databaseInterface.update {
-                            self.databaseInterface.save(movies)
-                        }
-                        
-                    }
-                    
                     completion(movies, nil)
                 }
                 catch let jsonError {
@@ -54,8 +47,6 @@ class APIServices {
                     print(jsonError)
                 }
             }
-            }.resume()
+        }.resume()
     }
-    
-    
 }
