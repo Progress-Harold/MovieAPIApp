@@ -126,6 +126,9 @@ extension MovieListViewController: UITableViewDelegate {
         
         movieDetailVC.movieName = movie.name
         
-        self.navigationController?.pushViewController(movieDetailVC, animated: true)
+    
+            
+            self.navigationController?.pushViewController(movieDetailVC, animated: true)
+        
     }
 }
