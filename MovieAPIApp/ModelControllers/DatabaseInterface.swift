@@ -11,5 +11,7 @@ import Foundation
 
 
 class DatabaseInterface {
+    static var sharedInstance = DatabaseInterface()
+    
     
 }

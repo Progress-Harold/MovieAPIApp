@@ -1,11 +1,24 @@
-Task List: 
-- Get list of locations []
-- Show list of movies ,locations, and dates []
-- show location on map in detail view when tapping on it. []
+***********************
+*** Developer Notes ***
+***********************
+Harold Davis Jr
+
+11/15/2017
+
+Task List:
+- Get list of Movies. [x]
+- Show list of movies ,locations, and dates. []
+- Show location on map in detail view when tapping on it. []
 - Add a sorting button on nav bar. []
-- Cache data locally []
+- Cache data locally. []
 
 
-Bugs:
--
+Tests:
+- Test JSON Response. []
+- Saving Movie Objects. []
+- Cacheing Data. []
+- Map in Detail Movie View. []
+- Sort List of Movies. []
+
+Known Bugs From Tests:
 
