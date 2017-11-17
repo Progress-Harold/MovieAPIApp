@@ -25,20 +25,33 @@ class MovieListViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if !appState.hasSeenWelcomePage {
+            self.present(appState.presentWelcomeScreen(), animated: true) {
+                
+            }
+        }
+        
+        
         
         getMovies()
     }
     
     
     func getMovies() {
+        print("Loading...")
         moviesArr = movieMC.getSavedMovies()
         
-        appState.services.getMovies { movieFromServer, error in
-            if let movieFromServer = movieFromServer {
+        appState.services.getMovies { moviesFromServer, error in
+            if let moviesFromServer = moviesFromServer {
                 // Check if database is not empty...
                 if !self.moviesArr.isEmpty {
                     let movieIDs = self.moviesArr.map { $0.id }
-                    for movie in movieFromServer {
+                    for movie in moviesFromServer {
                         if !movieIDs.contains(movie.id) {
                             self.moviesArr.append(movie)
                         }
@@ -47,17 +60,18 @@ class MovieListViewController: UIViewController {
                 // If database is empty populate array with what is on the server and save all objects.
                 else {
                     DispatchQueue.main.async {
-                        self.moviesArr = movieFromServer
+                        self.moviesArr = moviesFromServer
+                        self.appState.databaseInterface.update {
+                            self.appState.databaseInterface.save(moviesFromServer)                            
+                        }
                     }
                 }
             }
             
-            
             DispatchQueue.main.async {
-                self.appState.databaseInterface.update {
-                    self.moviesArr = self.filterMovies().sorted { $0.comparableName < $1.comparableName }                    
-                }
+                self.moviesArr = self.filterMovies().sorted { $0.comparableName < $1.comparableName }
                 self.tableView.reloadData()
+                print("Loading complete...")
             }
         }
     }
@@ -124,11 +138,8 @@ extension MovieListViewController: UITableViewDelegate {
         let storyboard = UIStoryboard(name: "MovieDetails", bundle: nil)
         let movieDetailVC = storyboard.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
         
-        movieDetailVC.movieName = movie.name
+        movieDetailVC.selectedMovie = movie
         
-    
-            
-            self.navigationController?.pushViewController(movieDetailVC, animated: true)
-        
+        self.navigationController?.pushViewController(movieDetailVC, animated: true)
     }
 }

@@ -22,7 +22,7 @@ class MovieDetailViewController: UIViewController {
     
     var movieMC = MovieModelController.sharedInstence
     
-    var movieName: String!
+    var selectedMovie: Movie!
     
     var moviesArr: [Movie] = []
     
@@ -31,34 +31,38 @@ class MovieDetailViewController: UIViewController {
     var currentCoordinates: CLLocationCoordinate2D?
     
     
+    
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
+        tableView.delegate = self
         mapView.showsUserLocation = true
         mapView.delegate = self
         
         self.locationManager = CLLocationManager()
         self.locationManager?.requestAlwaysAuthorization()
         
-        currentCoordinates = CLLocationCoordinate2D(latitude: 37.42274, longitude: -122.139956)
-        
-        let region = MKCoordinateRegionMakeWithDistance((self.currentCoordinates)!, 2000, 2000)
-        
-        self.mapView.setRegion(region, animated: true)
+        addMapAnnotation(with: selectedMovie.address!)
     }
     
     
-    func setUpLocations() {
-        moviesArr = movieMC.getMoviesBy(name: movieName)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        let firstMovie = moviesArr.first
-        if let address = firstMovie?.address {
-            addMapAnnotation(with: address)
-        }
-        
-        
+       configureDetailView()
     }
     
+    
+    func configureDetailView() {
+        moviesArr = movieMC.getMoviesBy(name: selectedMovie.name!)
+        movieNameLbl.text = selectedMovie.name
+        date.text = selectedMovie.date
+        address.text = selectedMovie.address
+        addMapAnnotation(with: selectedMovie.address!)
+    }
 }
 
 extension MovieDetailViewController: MKMapViewDelegate {
@@ -73,7 +77,32 @@ extension MovieDetailViewController: MKMapViewDelegate {
             self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
         }
     }
+}
+
+extension MovieDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return moviesArr.count
+    }
     
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let movie = moviesArr[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
+        
+        cell.textLabel?.text = movie.address
+        cell.detailTextLabel?.text = movie.date
+        
+        return cell
+    }
+}
+
+extension MovieDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = moviesArr[indexPath.row]
+
+        addMapAnnotation(with: movie.address!)
+    }
 }
 
 

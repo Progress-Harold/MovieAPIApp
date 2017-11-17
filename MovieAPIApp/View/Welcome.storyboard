@@ -12,7 +12,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="3ed-Vb-rhE">
             <objects>
-                <viewController id="1Cb-mq-5La" customClass="WelcomeViewController" customModule="MovieAPIApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="1Cb-mq-5La" customClass="WelcomeViewController" customModule="MovieAPIApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tex-Hn-YmK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,35 +20,38 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1E-eb-mO3">
                                 <rect key="frame" x="85" y="171" width="244" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="ymD-S1-NNX"/>
+                                    <constraint firstAttribute="height" constant="64" id="zph-Z1-HIk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="INh-gF-M8S">
-                                <rect key="frame" x="85" y="531" width="244" height="64"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="movieSkycatch logo" translatesAutoresizingMaskIntoConstraints="NO" id="gTx-sL-hbo">
                                 <rect key="frame" x="126" y="265" width="163" height="207"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-qF-OU7">
+                                <rect key="frame" x="135" y="572" width="145" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="6TB-AK-zQv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1652139276" green="0.16781006749999999" blue="0.2157994956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="gTx-sL-hbo" firstAttribute="centerY" secondItem="Tex-Hn-YmK" secondAttribute="centerY" id="Gtb-UM-owe"/>
-                            <constraint firstItem="INh-gF-M8S" firstAttribute="top" secondItem="gTx-sL-hbo" secondAttribute="bottom" constant="59" id="S1i-jX-IB4"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="top" secondItem="8d1-CT-Qsd" secondAttribute="top" constant="151" id="egP-Zy-pNB"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="centerX" secondItem="gTx-sL-hbo" secondAttribute="centerX" id="fT7-jB-UEL"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="trailing" secondItem="INh-gF-M8S" secondAttribute="trailing" id="gbD-p2-rNu"/>
-                            <constraint firstItem="gTx-sL-hbo" firstAttribute="top" secondItem="C1E-eb-mO3" secondAttribute="bottom" constant="30" id="geD-LX-sYm"/>
-                            <constraint firstItem="gTx-sL-hbo" firstAttribute="leading" secondItem="8d1-CT-Qsd" secondAttribute="leading" constant="126" id="kHX-AI-bB9"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="leading" secondItem="8d1-CT-Qsd" secondAttribute="leading" constant="85" id="muM-C9-Ofn"/>
-                            <constraint firstItem="8d1-CT-Qsd" firstAttribute="bottom" secondItem="INh-gF-M8S" secondAttribute="bottom" constant="141" id="pCt-QW-Lhk"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="centerX" secondItem="Tex-Hn-YmK" secondAttribute="centerX" id="u89-hh-kYz"/>
-                            <constraint firstItem="C1E-eb-mO3" firstAttribute="leading" secondItem="INh-gF-M8S" secondAttribute="leading" id="uTU-67-3I6"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="centerX" secondItem="Tex-Hn-YmK" secondAttribute="centerX" id="1G6-Gf-N6z"/>
+                            <constraint firstItem="gTx-sL-hbo" firstAttribute="top" secondItem="C1E-eb-mO3" secondAttribute="bottom" constant="30" id="1IB-WZ-Pwn"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="top" secondItem="8d1-CT-Qsd" secondAttribute="top" constant="151" id="2Q8-k7-FvP"/>
+                            <constraint firstItem="8d1-CT-Qsd" firstAttribute="bottom" secondItem="T9n-qF-OU7" secondAttribute="bottom" constant="91" id="5C8-qX-5UP"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="leading" secondItem="8d1-CT-Qsd" secondAttribute="leading" constant="85" id="CGZ-ql-eYG"/>
+                            <constraint firstItem="T9n-qF-OU7" firstAttribute="leading" secondItem="8d1-CT-Qsd" secondAttribute="leading" constant="135" id="CHY-9J-qdP"/>
+                            <constraint firstItem="gTx-sL-hbo" firstAttribute="leading" secondItem="8d1-CT-Qsd" secondAttribute="leading" constant="126" id="Wp1-W9-5gI"/>
+                            <constraint firstItem="gTx-sL-hbo" firstAttribute="centerX" secondItem="T9n-qF-OU7" secondAttribute="centerX" id="asa-bw-BNm"/>
+                            <constraint firstItem="gTx-sL-hbo" firstAttribute="centerY" secondItem="Tex-Hn-YmK" secondAttribute="centerY" id="rz7-B5-Asj"/>
+                            <constraint firstItem="C1E-eb-mO3" firstAttribute="centerX" secondItem="gTx-sL-hbo" secondAttribute="centerX" id="sTg-sY-xED"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8d1-CT-Qsd"/>
                     </view>

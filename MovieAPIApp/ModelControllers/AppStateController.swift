@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class AppStateController {
@@ -31,5 +32,12 @@ class AppStateController {
         }
     }
     
+    
+    func presentWelcomeScreen() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
+        let welcomeVC = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+        
+        return welcomeVC
+    }
     
 }
