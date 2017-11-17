@@ -20,12 +20,14 @@ class MovieListViewController: UIViewController {
     
     
     //MARK: View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -74,9 +76,11 @@ class MovieListViewController: UIViewController {
         }
     }
     
+    
+    /// Uses remove duplicates method to return a unique list of movies.
     func filterMovies() -> [Movie] {
         var movieNames: [String] = self.moviesArr.map { $0.comparableName }
-        movieNames = uniqueElementsFrom(array: movieNames)
+        movieNames = removeDuplicatesFrom(array: movieNames)
         
         var newMovieArr: [Movie] = []
         
@@ -93,8 +97,14 @@ class MovieListViewController: UIViewController {
         return newMovieArr
     }
     
-    
-    func uniqueElementsFrom(array: [String]) -> [String] {
+    /**
+     Remove Duplicates From an array of strings. Easy to use with an array of movie names.
+     
+     - parameter array: array of strings to be sorted for uniqueness.
+     
+     - returns: Unique Array of strings.
+     */
+    func removeDuplicatesFrom(array: [String]) -> [String] {
         //Create an empty Set to track unique items
         var set = Set<String>()
         let result = array.filter {
@@ -123,7 +133,7 @@ extension MovieListViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! MovieTableViewCell
         
-        cell.configureCell(movie)
+        cell.configure(movie)
         
         return cell
     }

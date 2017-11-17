@@ -18,7 +18,7 @@ Tests:
 - Saving Movie Objects. [x]
 - Cacheing Data. [x]
 - Map in Detail Movie View. [x]
-- Sort List of Movies. []
+- Sort List of Movies. [x]
 
 Known Bugs From Tests:
 - Not pushing on navigation Stack. [Resolved]

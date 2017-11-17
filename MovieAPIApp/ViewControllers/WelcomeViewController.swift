@@ -13,15 +13,16 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var startLbl: UIButton!
     @IBOutlet weak var skycatchMovieLogoImage: UIImageView!
     
-    
     var appState = AppStateController.sharedInstance
     
-    //MARK: View Life Cycle
+    
+    
+    //MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,7 +48,6 @@ class WelcomeViewController: UIViewController {
             self.welcomeLbl.alpha = 1.0
             self.startLbl.alpha = 1.0
             self.skycatchMovieLogoImage.alpha = 1.0
-            
         }, completion: nil)
     }
     
@@ -55,6 +55,5 @@ class WelcomeViewController: UIViewController {
     @IBAction func startSearchBtn(_ sender: Any) {
         self.appState.hasSeenWelcomePage = true
         self.dismiss(animated: true)
-        
     }
 }

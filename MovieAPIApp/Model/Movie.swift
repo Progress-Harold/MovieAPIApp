@@ -23,6 +23,9 @@ class Movie: Object  {
         return name ?? ""
     }
     
+    /**
+     Indices helps keep track of what index points are associated with specific data.
+     */
     struct Indices {
         static var id: Int = 0
         static var name: Int = 8

@@ -8,7 +8,9 @@
 
 import Foundation
 
-
+/**
+ This model controller is built to get all movies from the realm database & specific movie objects by movie name.
+ */
 class MovieModelController {
     static var sharedInstence = MovieModelController()
     

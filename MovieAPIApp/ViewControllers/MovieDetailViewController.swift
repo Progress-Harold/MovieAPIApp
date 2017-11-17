@@ -75,6 +75,11 @@ class MovieDetailViewController: UIViewController {
 }
 
 extension MovieDetailViewController: MKMapViewDelegate {
+    /**
+     Adds map pin and converts and address into lon & lat coordinates.
+     
+     - parameter address: pass an adress given by a movie address property.
+     */
     func addMapAnnotation(with address: String) {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address) {

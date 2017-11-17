@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- Made to get data needed from the server.
+ Made to get data needed from the server using the bas url and build object to pass with a closure: getMovies().
  */
 class APIServices {
     static var sharedInstance = APIServices()

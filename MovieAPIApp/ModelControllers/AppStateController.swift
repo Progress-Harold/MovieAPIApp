@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-
+/**
+ AppStateController will give quick access to the database & api service calls (only one currently)
+ */
 class AppStateController {
     static var sharedInstance = AppStateController()
     

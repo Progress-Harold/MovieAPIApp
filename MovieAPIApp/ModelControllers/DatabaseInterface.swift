@@ -10,17 +10,24 @@ import Foundation
 import RealmSwift
 
 
+/**
+ Database Interface is an interface used to manipulate realm objects.
+ * Tools
+     - realm store
+     - update block
+     - set filepath (I placed this in the app delegate.)
+     - save & delete
+ */
 class DatabaseInterface {
     static var sharedInstance = DatabaseInterface()
     
     
-    
     //MARK: Call default realm location.
     
+    /// Realm store
     var realm: Realm {
         return try! Realm()
     }
-    
     
     
     func update(_ block: @escaping () -> Void) {
