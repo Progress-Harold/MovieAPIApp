@@ -58,10 +58,19 @@ class MovieDetailViewController: UIViewController {
     
     func configureDetailView() {
         moviesArr = movieMC.getMoviesBy(name: selectedMovie.name!)
+        
+        setLabels()
+
+        DispatchQueue.main.async {
+            self.addMapAnnotation(with: self.selectedMovie.address!)
+        }
+    }
+    
+    
+    func setLabels() {
         movieNameLbl.text = selectedMovie.name
         date.text = selectedMovie.date
         address.text = selectedMovie.address
-        addMapAnnotation(with: selectedMovie.address!)
     }
 }
 
@@ -100,8 +109,12 @@ extension MovieDetailViewController: UITableViewDataSource {
 extension MovieDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = moviesArr[indexPath.row]
-
-        addMapAnnotation(with: movie.address!)
+        selectedMovie = movie
+        
+        DispatchQueue.main.async {
+            self.setLabels()
+            self.addMapAnnotation(with: movie.address!)
+        }
     }
 }
 

@@ -38,6 +38,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="0.99997591969999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="startSearchBtn:" destination="1Cb-mq-5La" eventType="touchUpInside" id="c4l-u4-Jzk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1652139276" green="0.16781006749999999" blue="0.2157994956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -55,6 +58,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8d1-CT-Qsd"/>
                     </view>
+                    <connections>
+                        <outlet property="skycatchMovieLogoImage" destination="gTx-sL-hbo" id="brP-YB-7lY"/>
+                        <outlet property="startLbl" destination="T9n-qF-OU7" id="nYa-aR-gqe"/>
+                        <outlet property="welcomeLbl" destination="C1E-eb-mO3" id="Ips-fN-57e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FF-dG-YeV" sceneMemberID="firstResponder"/>
             </objects>

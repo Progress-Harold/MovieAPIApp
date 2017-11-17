@@ -31,14 +31,12 @@ class MovieListViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if !appState.hasSeenWelcomePage {
-            self.present(appState.presentWelcomeScreen(), animated: true) {
-                
-            }
+            self.present(appState.presentWelcomeScreen(), animated: true)
         }
         
-        
-        
-        getMovies()
+        DispatchQueue.main.async {
+            self.getMovies()
+        }
     }
     
     

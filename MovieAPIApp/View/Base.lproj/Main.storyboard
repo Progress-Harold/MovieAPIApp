@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uzk-Hw-sRo">
-                                <rect key="frame" x="0.0" y="114" width="414" height="622"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" rowHeight="42" id="Sma-r3-5mO" customClass="MovieTableViewCell" customModule="MovieAPIApp" customModuleProvider="target">
@@ -63,7 +63,7 @@
                         <constraints>
                             <constraint firstItem="uzk-Hw-sRo" firstAttribute="trailing" secondItem="FOj-zx-er0" secondAttribute="trailing" id="RRW-wn-D1z"/>
                             <constraint firstItem="uzk-Hw-sRo" firstAttribute="bottom" secondItem="FOj-zx-er0" secondAttribute="bottom" id="Udt-kO-pC9"/>
-                            <constraint firstItem="uzk-Hw-sRo" firstAttribute="top" secondItem="FOj-zx-er0" secondAttribute="top" constant="50" id="jMx-oK-bSq"/>
+                            <constraint firstItem="uzk-Hw-sRo" firstAttribute="top" secondItem="FOj-zx-er0" secondAttribute="top" id="jMx-oK-bSq"/>
                             <constraint firstItem="uzk-Hw-sRo" firstAttribute="leading" secondItem="FOj-zx-er0" secondAttribute="leading" id="msy-rB-0vE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FOj-zx-er0"/>
